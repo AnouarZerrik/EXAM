@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.idexam_exam = new System.Windows.Forms.TextBox();
+            this.idqsm_txt = new System.Windows.Forms.TextBox();
+            this.debut_txt = new System.Windows.Forms.TextBox();
+            this.idouverte_txt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.fin_txt = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbx_qsm = new System.Windows.Forms.ComboBox();
+            this.cbx_ouverte = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -58,33 +58,33 @@
             this.button2.Text = "Question ouverte";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // idexam_exam
             // 
-            this.textBox1.Location = new System.Drawing.Point(157, 122);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 23);
-            this.textBox1.TabIndex = 2;
+            this.idexam_exam.Location = new System.Drawing.Point(157, 122);
+            this.idexam_exam.Name = "idexam_exam";
+            this.idexam_exam.Size = new System.Drawing.Size(181, 23);
+            this.idexam_exam.TabIndex = 2;
             // 
-            // textBox2
+            // idqsm_txt
             // 
-            this.textBox2.Location = new System.Drawing.Point(157, 209);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(181, 23);
-            this.textBox2.TabIndex = 3;
+            this.idqsm_txt.Location = new System.Drawing.Point(157, 209);
+            this.idqsm_txt.Name = "idqsm_txt";
+            this.idqsm_txt.Size = new System.Drawing.Size(181, 23);
+            this.idqsm_txt.TabIndex = 3;
             // 
-            // textBox4
+            // debut_txt
             // 
-            this.textBox4.Location = new System.Drawing.Point(157, 151);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(181, 23);
-            this.textBox4.TabIndex = 5;
+            this.debut_txt.Location = new System.Drawing.Point(157, 151);
+            this.debut_txt.Name = "debut_txt";
+            this.debut_txt.Size = new System.Drawing.Size(181, 23);
+            this.debut_txt.TabIndex = 5;
             // 
-            // textBox5
+            // idouverte_txt
             // 
-            this.textBox5.Location = new System.Drawing.Point(157, 238);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(181, 23);
-            this.textBox5.TabIndex = 6;
+            this.idouverte_txt.Location = new System.Drawing.Point(157, 238);
+            this.idouverte_txt.Name = "idouverte_txt";
+            this.idouverte_txt.Size = new System.Drawing.Size(181, 23);
+            this.idouverte_txt.TabIndex = 6;
             // 
             // label1
             // 
@@ -133,12 +133,12 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "id_QuestionOuverte";
             // 
-            // textBox3
+            // fin_txt
             // 
-            this.textBox3.Location = new System.Drawing.Point(157, 183);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(181, 23);
-            this.textBox3.TabIndex = 14;
+            this.fin_txt.Location = new System.Drawing.Point(157, 183);
+            this.fin_txt.Name = "fin_txt";
+            this.fin_txt.Size = new System.Drawing.Size(181, 23);
+            this.fin_txt.TabIndex = 14;
             // 
             // button4
             // 
@@ -167,22 +167,22 @@
             this.button7.Text = "Anuller";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbx_qsm
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(584, 45);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(194, 23);
-            this.comboBox1.TabIndex = 19;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cbx_qsm.FormattingEnabled = true;
+            this.cbx_qsm.Location = new System.Drawing.Point(584, 45);
+            this.cbx_qsm.Name = "cbx_qsm";
+            this.cbx_qsm.Size = new System.Drawing.Size(194, 23);
+            this.cbx_qsm.TabIndex = 19;
+            this.cbx_qsm.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // comboBox2
+            // cbx_ouverte
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(584, 98);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(194, 23);
-            this.comboBox2.TabIndex = 20;
+            this.cbx_ouverte.FormattingEnabled = true;
+            this.cbx_ouverte.Location = new System.Drawing.Point(584, 98);
+            this.cbx_ouverte.Name = "cbx_ouverte";
+            this.cbx_ouverte.Size = new System.Drawing.Size(194, 23);
+            this.cbx_ouverte.TabIndex = 20;
             // 
             // label6
             // 
@@ -198,9 +198,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(491, 101);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 15);
+            this.label7.Size = new System.Drawing.Size(49, 15);
             this.label7.TabIndex = 22;
-            this.label7.Text = "id_qsm";
+            this.label7.Text = "Ouverte";
             // 
             // button1
             // 
@@ -219,21 +219,21 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbx_ouverte);
+            this.Controls.Add(this.cbx_qsm);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.fin_txt);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.idouverte_txt);
+            this.Controls.Add(this.debut_txt);
+            this.Controls.Add(this.idqsm_txt);
+            this.Controls.Add(this.idexam_exam);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
@@ -246,21 +246,21 @@
 
         #endregion
         private Button button2;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private TextBox idexam_exam;
+        private TextBox idqsm_txt;
+        private TextBox debut_txt;
+        private TextBox idouverte_txt;
         private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
-        private TextBox textBox3;
+        private TextBox fin_txt;
         private Button button4;
         private Button button6;
         private Button button7;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private ComboBox cbx_qsm;
+        private ComboBox cbx_ouverte;
         private Label label6;
         private Label label7;
         private Button button1;

@@ -14,6 +14,11 @@ namespace EXAM
             InitializeComponent();
         }
 
+        static string chaine = @"Data Source=localhost;Initial Catalog=EXAM;Integrated Security=True";
+        static SqlConnection cnx = new SqlConnection(chaine);
+        static SqlCommand cmd = new SqlCommand();
+        static SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -40,6 +45,11 @@ namespace EXAM
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void QuestionOuverte_Load(object sender, EventArgs e)
         {
 
         }

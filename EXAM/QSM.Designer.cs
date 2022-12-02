@@ -28,30 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.option1_txt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.option3_txt = new System.Windows.Forms.TextBox();
+            this.question_txt = new System.Windows.Forms.TextBox();
+            this.option2_txt = new System.Windows.Forms.TextBox();
+            this.id_qsm_txt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.optionC_txt = new System.Windows.Forms.TextBox();
+            this.Anuller_btn = new System.Windows.Forms.Button();
+            this.validate_btn = new System.Windows.Forms.Button();
+            this.Ajoute_btn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox3
+            // option1_txt
             // 
-            this.textBox3.Location = new System.Drawing.Point(162, 225);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(181, 23);
-            this.textBox3.TabIndex = 24;
+            this.option1_txt.Location = new System.Drawing.Point(162, 225);
+            this.option1_txt.Name = "option1_txt";
+            this.option1_txt.Size = new System.Drawing.Size(181, 23);
+            this.option1_txt.TabIndex = 24;
             // 
             // label5
             // 
@@ -98,33 +98,33 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "ID_QSM";
             // 
-            // textBox5
+            // option3_txt
             // 
-            this.textBox5.Location = new System.Drawing.Point(162, 281);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(181, 23);
-            this.textBox5.TabIndex = 18;
+            this.option3_txt.Location = new System.Drawing.Point(162, 281);
+            this.option3_txt.Name = "option3_txt";
+            this.option3_txt.Size = new System.Drawing.Size(181, 23);
+            this.option3_txt.TabIndex = 18;
             // 
-            // textBox4
+            // question_txt
             // 
-            this.textBox4.Location = new System.Drawing.Point(162, 131);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(181, 23);
-            this.textBox4.TabIndex = 17;
+            this.question_txt.Location = new System.Drawing.Point(162, 131);
+            this.question_txt.Name = "question_txt";
+            this.question_txt.Size = new System.Drawing.Size(181, 23);
+            this.question_txt.TabIndex = 17;
             // 
-            // textBox2
+            // option2_txt
             // 
-            this.textBox2.Location = new System.Drawing.Point(162, 251);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(181, 23);
-            this.textBox2.TabIndex = 16;
+            this.option2_txt.Location = new System.Drawing.Point(162, 251);
+            this.option2_txt.Name = "option2_txt";
+            this.option2_txt.Size = new System.Drawing.Size(181, 23);
+            this.option2_txt.TabIndex = 16;
             // 
-            // textBox1
+            // id_qsm_txt
             // 
-            this.textBox1.Location = new System.Drawing.Point(162, 102);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 23);
-            this.textBox1.TabIndex = 15;
+            this.id_qsm_txt.Location = new System.Drawing.Point(162, 102);
+            this.id_qsm_txt.Name = "id_qsm_txt";
+            this.id_qsm_txt.Size = new System.Drawing.Size(181, 23);
+            this.id_qsm_txt.TabIndex = 15;
             // 
             // label6
             // 
@@ -135,39 +135,42 @@
             this.label6.TabIndex = 26;
             this.label6.Text = "option Corecte";
             // 
-            // textBox6
+            // optionC_txt
             // 
-            this.textBox6.Location = new System.Drawing.Point(162, 310);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(181, 23);
-            this.textBox6.TabIndex = 25;
+            this.optionC_txt.Location = new System.Drawing.Point(162, 310);
+            this.optionC_txt.Name = "optionC_txt";
+            this.optionC_txt.Size = new System.Drawing.Size(181, 23);
+            this.optionC_txt.TabIndex = 25;
             // 
-            // button7
+            // Anuller_btn
             // 
-            this.button7.Location = new System.Drawing.Point(162, 384);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(123, 44);
-            this.button7.TabIndex = 29;
-            this.button7.Text = "Anuller";
-            this.button7.UseVisualStyleBackColor = true;
+            this.Anuller_btn.Location = new System.Drawing.Point(162, 384);
+            this.Anuller_btn.Name = "Anuller_btn";
+            this.Anuller_btn.Size = new System.Drawing.Size(123, 44);
+            this.Anuller_btn.TabIndex = 29;
+            this.Anuller_btn.Text = "Anuller";
+            this.Anuller_btn.UseVisualStyleBackColor = true;
+            this.Anuller_btn.Click += new System.EventHandler(this.Anuller_btn_Click);
             // 
-            // button6
+            // validate_btn
             // 
-            this.button6.Location = new System.Drawing.Point(305, 384);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(123, 44);
-            this.button6.TabIndex = 28;
-            this.button6.Text = "Validee";
-            this.button6.UseVisualStyleBackColor = true;
+            this.validate_btn.Location = new System.Drawing.Point(305, 384);
+            this.validate_btn.Name = "validate_btn";
+            this.validate_btn.Size = new System.Drawing.Size(123, 44);
+            this.validate_btn.TabIndex = 28;
+            this.validate_btn.Text = "Validee";
+            this.validate_btn.UseVisualStyleBackColor = true;
+            this.validate_btn.Click += new System.EventHandler(this.validate_btn_Click);
             // 
-            // button4
+            // Ajoute_btn
             // 
-            this.button4.Location = new System.Drawing.Point(22, 386);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(123, 44);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Ajouter";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Ajoute_btn.Location = new System.Drawing.Point(22, 386);
+            this.Ajoute_btn.Name = "Ajoute_btn";
+            this.Ajoute_btn.Size = new System.Drawing.Size(123, 44);
+            this.Ajoute_btn.TabIndex = 27;
+            this.Ajoute_btn.Text = "Ajouter";
+            this.Ajoute_btn.UseVisualStyleBackColor = true;
+            this.Ajoute_btn.Click += new System.EventHandler(this.Ajoute_btn_Click);
             // 
             // button1
             // 
@@ -177,6 +180,7 @@
             this.button1.TabIndex = 30;
             this.button1.Text = "EXAM";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // QSM
             // 
@@ -184,21 +188,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.Anuller_btn);
+            this.Controls.Add(this.validate_btn);
+            this.Controls.Add(this.Ajoute_btn);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.optionC_txt);
+            this.Controls.Add(this.option1_txt);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.option3_txt);
+            this.Controls.Add(this.question_txt);
+            this.Controls.Add(this.option2_txt);
+            this.Controls.Add(this.id_qsm_txt);
             this.Name = "QSM";
             this.Text = "QSM";
             this.Load += new System.EventHandler(this.QSM_Load);
@@ -209,21 +213,21 @@
 
         #endregion
 
-        private TextBox textBox3;
+        private TextBox option1_txt;
         private Label label5;
         private Label label4;
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox option3_txt;
+        private TextBox question_txt;
+        private TextBox option2_txt;
+        private TextBox id_qsm_txt;
         private Label label6;
-        private TextBox textBox6;
-        private Button button7;
-        private Button button6;
-        private Button button4;
+        private TextBox optionC_txt;
+        private Button Anuller_btn;
+        private Button validate_btn;
+        private Button Ajoute_btn;
         private Button button1;
     }
 }

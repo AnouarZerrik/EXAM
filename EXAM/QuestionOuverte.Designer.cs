@@ -147,6 +147,7 @@
             this.Controls.Add(this.button4);
             this.Name = "QuestionOuverte";
             this.Text = "QuestionOuverte";
+            this.Load += new System.EventHandler(this.QuestionOuverte_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
