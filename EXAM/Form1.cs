@@ -12,8 +12,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace EXAM
 {
+
     public partial class Form1 : Form
     {
+        public int val;
         public Form1()
         {
             InitializeComponent();
@@ -41,6 +43,16 @@ namespace EXAM
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ajoute_btn.Enabled = true;
+            delete_btn.Enabled = true;
+            anuller_btn.Enabled = false;
+            validate_btn.Enabled = false;
+            idexam_exam.Enabled = false;
+            debut_txt.Enabled = false;
+            fin_txt.Enabled = false;
+            idqsm_txt.Enabled = false;
+            idouverte_txt.Enabled = false;
+
             cbx1();
             cbx2();
 
@@ -108,6 +120,40 @@ namespace EXAM
             cbx_ouverte.ValueMember = "id_QuestionOuvert";
             idouverte_txt.DataBindings.Add("text", cbx_ouverte.DataSource, "id_QuestionOuvert");
             cnx.Close();
+        }
+
+        private void ajoute_btn_Click(object sender, EventArgs e)
+        {
+            val = 1;
+            QO.Enabled = false;
+            QSM.Enabled = false;
+            ajoute_btn.Enabled = false;
+            delete_btn.Enabled = false;
+            anuller_btn.Enabled = true;
+            validate_btn.Enabled = true;
+            idexam_exam.Enabled = true;
+            debut_txt.Enabled = true;
+            fin_txt.Enabled = true;
+            idqsm_txt.Enabled = true;
+            idouverte_txt.Enabled = true;
+
+
+        }
+
+        private void delete_btn_Click(object sender, EventArgs e)
+        {
+            val = 2;
+            QO.Enabled = false;
+            QSM.Enabled = false;
+            ajoute_btn.Enabled = false;
+            delete_btn.Enabled = false;
+            anuller_btn.Enabled = true;
+            validate_btn.Enabled = true;
+            idexam_exam.Enabled = true;
+            debut_txt.Enabled = false;
+            fin_txt.Enabled = false;
+            idqsm_txt.Enabled = false;
+            idouverte_txt.Enabled = false;
         }
     }
 }
