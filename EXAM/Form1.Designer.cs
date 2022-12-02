@@ -39,14 +39,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.fin_txt = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.ajoute_btn = new System.Windows.Forms.Button();
+            this.validate_btn = new System.Windows.Forms.Button();
+            this.anuller_btn = new System.Windows.Forms.Button();
             this.cbx_qsm = new System.Windows.Forms.ComboBox();
             this.cbx_ouverte = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.delete_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button2
@@ -141,32 +142,32 @@
             this.fin_txt.Size = new System.Drawing.Size(181, 23);
             this.fin_txt.TabIndex = 14;
             // 
-            // button4
+            // ajoute_btn
             // 
-            this.button4.Location = new System.Drawing.Point(17, 392);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(123, 44);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "Ajouter";
-            this.button4.UseVisualStyleBackColor = true;
+            this.ajoute_btn.Location = new System.Drawing.Point(17, 392);
+            this.ajoute_btn.Name = "ajoute_btn";
+            this.ajoute_btn.Size = new System.Drawing.Size(123, 44);
+            this.ajoute_btn.TabIndex = 15;
+            this.ajoute_btn.Text = "Ajouter";
+            this.ajoute_btn.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // validate_btn
             // 
-            this.button6.Location = new System.Drawing.Point(300, 390);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(123, 44);
-            this.button6.TabIndex = 17;
-            this.button6.Text = "Validee";
-            this.button6.UseVisualStyleBackColor = true;
+            this.validate_btn.Location = new System.Drawing.Point(402, 394);
+            this.validate_btn.Name = "validate_btn";
+            this.validate_btn.Size = new System.Drawing.Size(123, 44);
+            this.validate_btn.TabIndex = 17;
+            this.validate_btn.Text = "Validee";
+            this.validate_btn.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // anuller_btn
             // 
-            this.button7.Location = new System.Drawing.Point(157, 390);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(123, 44);
-            this.button7.TabIndex = 18;
-            this.button7.Text = "Anuller";
-            this.button7.UseVisualStyleBackColor = true;
+            this.anuller_btn.Location = new System.Drawing.Point(259, 394);
+            this.anuller_btn.Name = "anuller_btn";
+            this.anuller_btn.Size = new System.Drawing.Size(123, 44);
+            this.anuller_btn.TabIndex = 18;
+            this.anuller_btn.Text = "Anuller";
+            this.anuller_btn.UseVisualStyleBackColor = true;
             // 
             // cbx_qsm
             // 
@@ -184,6 +185,7 @@
             this.cbx_ouverte.Name = "cbx_ouverte";
             this.cbx_ouverte.Size = new System.Drawing.Size(194, 23);
             this.cbx_ouverte.TabIndex = 20;
+            this.cbx_ouverte.SelectedIndexChanged += new System.EventHandler(this.cbx_ouverte_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -213,18 +215,28 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
+            // delete_btn
+            // 
+            this.delete_btn.Location = new System.Drawing.Point(157, 392);
+            this.delete_btn.Name = "delete_btn";
+            this.delete_btn.Size = new System.Drawing.Size(96, 44);
+            this.delete_btn.TabIndex = 23;
+            this.delete_btn.Text = "delete";
+            this.delete_btn.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.delete_btn);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbx_ouverte);
             this.Controls.Add(this.cbx_qsm);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.anuller_btn);
+            this.Controls.Add(this.validate_btn);
+            this.Controls.Add(this.ajoute_btn);
             this.Controls.Add(this.fin_txt);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -257,13 +269,14 @@
         private Label label4;
         private Label label5;
         private TextBox fin_txt;
-        private Button button4;
-        private Button button6;
-        private Button button7;
+        private Button ajoute_btn;
+        private Button validate_btn;
+        private Button anuller_btn;
         private ComboBox cbx_qsm;
         private ComboBox cbx_ouverte;
         private Label label6;
         private Label label7;
         private Button button1;
+        private Button delete_btn;
     }
 }
