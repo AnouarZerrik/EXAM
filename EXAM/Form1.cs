@@ -155,5 +155,66 @@ namespace EXAM
             idqsm_txt.Enabled = false;
             idouverte_txt.Enabled = false;
         }
+
+        private void anuller_btn_Click(object sender, EventArgs e)
+        {
+            ajoute_btn.Enabled = true;
+            delete_btn.Enabled = true;
+            anuller_btn.Enabled = false;
+            validate_btn.Enabled = false;
+            idexam_exam.Enabled = false;
+            debut_txt.Enabled = false;
+            fin_txt.Enabled = false;
+            idqsm_txt.Enabled = false;
+            idouverte_txt.Enabled = false;
+        }
+
+        private void validate_btn_Click(object sender, EventArgs e)
+        {
+            if(val == 1)
+            {
+                cnx.Open();
+                cmd.Connection = cnx;
+                if (idexam_exam.Text == "" || debut_txt.Text == "" || fin_txt.Text == "" )
+                { MessageBox.Show("enter the inputs"); }
+                else
+                {
+                    cmd.CommandText = "insert into EXAM1(id_exam,date_debut,date_fin,id_qsm,id_QuestionOuverte) values('" + idexam_exam.Text + "','" + debut_txt.Text + "','" + fin_txt.Text + "','" + idqsm_txt.Text + "','" + idouverte_txt.Text + "') ";
+                    cmd.ExecuteNonQuery();
+                    ajoute_btn.Enabled = true;
+                    delete_btn.Enabled = true;
+                    anuller_btn.Enabled = false;
+                    validate_btn.Enabled = false;
+                    idexam_exam.Enabled = false;
+                    debut_txt.Enabled = false;
+                    fin_txt.Enabled = false;
+                    idqsm_txt.Enabled = false;
+                    idouverte_txt.Enabled = false;
+                    cnx.Close();
+
+                }
+            }
+            if (val == 2)
+            {
+                cnx.Open();
+                cmd.Connection = cnx;
+                if (idexam_exam.Text == "" )
+                { MessageBox.Show("enter the inputs"); }
+                else
+                {
+                    cmd.CommandText = "delete from EXAM1 where id_exam='" + idexam_exam.Text + "' ";
+                    cmd.ExecuteNonQuery();
+                    ajoute_btn.Enabled = true;
+                    delete_btn.Enabled = true;
+                    anuller_btn.Enabled = false;
+                    validate_btn.Enabled = false;
+                    idexam_exam.Enabled = false;
+                    debut_txt.Enabled = false;
+                    fin_txt.Enabled = false;
+                    idqsm_txt.Enabled = false;
+                    idouverte_txt.Enabled = false;
+                    cnx.Close();
+                }
+        }
     }
 }

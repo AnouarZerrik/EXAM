@@ -160,6 +160,7 @@
             this.validate_btn.TabIndex = 17;
             this.validate_btn.Text = "Validee";
             this.validate_btn.UseVisualStyleBackColor = true;
+            this.validate_btn.Click += new System.EventHandler(this.validate_btn_Click);
             // 
             // anuller_btn
             // 
@@ -169,6 +170,7 @@
             this.anuller_btn.TabIndex = 18;
             this.anuller_btn.Text = "Anuller";
             this.anuller_btn.UseVisualStyleBackColor = true;
+            this.anuller_btn.Click += new System.EventHandler(this.anuller_btn_Click);
             // 
             // cbx_qsm
             // 
