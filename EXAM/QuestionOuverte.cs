@@ -61,17 +61,26 @@ namespace EXAM
 
         private void validate_btn_Click(object sender, EventArgs e)
         {
+
             cnx.Open();
             cmd.Connection = cnx;
-            cmd.CommandText = "insert into question_ouverte(id_QuestionOuvert,question,Reponse) values('" + id_question_txt.Text + "','" + question_txt.Text + "','" + reponse_txt.Text + "') ";
-            cmd.ExecuteNonQuery();
-            ajoute_btn.Enabled = true;
-            id_question_txt.Enabled = false;
-            question_txt.Enabled = false;
-            reponse_txt.Enabled = false;
-            validate_btn.Enabled = false;
-            anuller_btn.Enabled = false;
-            cnx.Close();
+            if (id_question_txt.Text == "" || question_txt.Text == "" || reponse_txt.Text == "")
+            { MessageBox.Show("enter the inputs"); }
+            else
+            {
+                cmd.CommandText = "insert into question_ouverte(id_QuestionOuvert,question,Reponse) values('" + id_question_txt.Text + "','" + question_txt.Text + "','" + reponse_txt.Text + "') ";
+                cmd.ExecuteNonQuery();
+                ajoute_btn.Enabled = true;
+                id_question_txt.Enabled = false;
+                question_txt.Enabled = false;
+                reponse_txt.Enabled = false;
+                validate_btn.Enabled = false;
+                anuller_btn.Enabled = false;
+                cnx.Close();
+                id_question_txt.Clear();
+                question_txt.Clear();
+                reponse_txt.Clear();
+            }
         }
 
         private void ajoute_btn_Click(object sender, EventArgs e)
@@ -92,6 +101,10 @@ namespace EXAM
             reponse_txt.Enabled = false;
             validate_btn.Enabled = false;
             anuller_btn.Enabled = false;
+
+            id_question_txt.Clear();
+            question_txt.Clear();
+            reponse_txt.Clear();
         }
     }
 }
