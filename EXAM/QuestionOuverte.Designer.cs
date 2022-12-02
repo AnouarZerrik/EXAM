@@ -28,52 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.anuller_btn = new System.Windows.Forms.Button();
+            this.validate_btn = new System.Windows.Forms.Button();
+            this.ajoute_btn = new System.Windows.Forms.Button();
+            this.reponse_txt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.question_txt = new System.Windows.Forms.TextBox();
+            this.id_question_txt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button7
+            // anuller_btn
             // 
-            this.button7.Location = new System.Drawing.Point(169, 394);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(123, 44);
-            this.button7.TabIndex = 21;
-            this.button7.Text = "Anuller";
-            this.button7.UseVisualStyleBackColor = true;
+            this.anuller_btn.Location = new System.Drawing.Point(169, 394);
+            this.anuller_btn.Name = "anuller_btn";
+            this.anuller_btn.Size = new System.Drawing.Size(123, 44);
+            this.anuller_btn.TabIndex = 21;
+            this.anuller_btn.Text = "Anuller";
+            this.anuller_btn.UseVisualStyleBackColor = true;
+            this.anuller_btn.Click += new System.EventHandler(this.anuller_btn_Click);
             // 
-            // button6
+            // validate_btn
             // 
-            this.button6.Location = new System.Drawing.Point(312, 394);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(123, 44);
-            this.button6.TabIndex = 20;
-            this.button6.Text = "Validee";
-            this.button6.UseVisualStyleBackColor = true;
+            this.validate_btn.Location = new System.Drawing.Point(312, 394);
+            this.validate_btn.Name = "validate_btn";
+            this.validate_btn.Size = new System.Drawing.Size(123, 44);
+            this.validate_btn.TabIndex = 20;
+            this.validate_btn.Text = "Validee";
+            this.validate_btn.UseVisualStyleBackColor = true;
+            this.validate_btn.Click += new System.EventHandler(this.validate_btn_Click);
             // 
-            // button4
+            // ajoute_btn
             // 
-            this.button4.Location = new System.Drawing.Point(29, 396);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(123, 44);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "Ajouter";
-            this.button4.UseVisualStyleBackColor = true;
+            this.ajoute_btn.Location = new System.Drawing.Point(29, 396);
+            this.ajoute_btn.Name = "ajoute_btn";
+            this.ajoute_btn.Size = new System.Drawing.Size(123, 44);
+            this.ajoute_btn.TabIndex = 19;
+            this.ajoute_btn.Text = "Ajouter";
+            this.ajoute_btn.UseVisualStyleBackColor = true;
+            this.ajoute_btn.Click += new System.EventHandler(this.ajoute_btn_Click);
             // 
-            // textBox3
+            // reponse_txt
             // 
-            this.textBox3.Location = new System.Drawing.Point(169, 253);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(181, 23);
-            this.textBox3.TabIndex = 30;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.reponse_txt.Location = new System.Drawing.Point(169, 253);
+            this.reponse_txt.Name = "reponse_txt";
+            this.reponse_txt.Size = new System.Drawing.Size(181, 23);
+            this.reponse_txt.TabIndex = 30;
+            this.reponse_txt.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label3
             // 
@@ -100,51 +102,41 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(40, 133);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 15);
+            this.label1.Size = new System.Drawing.Size(69, 15);
             this.label1.TabIndex = 27;
-            this.label1.Text = "ID_QSM";
+            this.label1.Text = "ID_question";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox4
+            // question_txt
             // 
-            this.textBox4.Location = new System.Drawing.Point(169, 162);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(181, 23);
-            this.textBox4.TabIndex = 26;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.question_txt.Location = new System.Drawing.Point(169, 162);
+            this.question_txt.Name = "question_txt";
+            this.question_txt.Size = new System.Drawing.Size(181, 23);
+            this.question_txt.TabIndex = 26;
+            this.question_txt.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // textBox1
+            // id_question_txt
             // 
-            this.textBox1.Location = new System.Drawing.Point(169, 130);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 23);
-            this.textBox1.TabIndex = 25;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(665, 394);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 44);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "EXAM";
-            this.button1.UseVisualStyleBackColor = true;
+            this.id_question_txt.Location = new System.Drawing.Point(169, 130);
+            this.id_question_txt.Name = "id_question_txt";
+            this.id_question_txt.Size = new System.Drawing.Size(181, 23);
+            this.id_question_txt.TabIndex = 25;
+            this.id_question_txt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // QuestionOuverte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.reponse_txt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.question_txt);
+            this.Controls.Add(this.id_question_txt);
+            this.Controls.Add(this.anuller_btn);
+            this.Controls.Add(this.validate_btn);
+            this.Controls.Add(this.ajoute_btn);
             this.Name = "QuestionOuverte";
             this.Text = "QuestionOuverte";
             this.Load += new System.EventHandler(this.QuestionOuverte_Load);
@@ -155,15 +147,14 @@
 
         #endregion
 
-        private Button button7;
-        private Button button6;
-        private Button button4;
-        private TextBox textBox3;
+        private Button anuller_btn;
+        private Button validate_btn;
+        private Button ajoute_btn;
+        private TextBox reponse_txt;
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox textBox4;
-        private TextBox textBox1;
-        private Button button1;
+        private TextBox question_txt;
+        private TextBox id_question_txt;
     }
 }

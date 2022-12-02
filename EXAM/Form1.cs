@@ -68,5 +68,11 @@ namespace EXAM
             QSM q = new QSM();
             q.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            QuestionOuverte q = new QuestionOuverte();
+            q.Show();
+        }
     }
 }
