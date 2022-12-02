@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -47,16 +46,8 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(660, 332);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 48);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "QSM";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -211,6 +202,16 @@
             this.label7.TabIndex = 22;
             this.label7.Text = "id_qsm";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(660, 332);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(118, 48);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "QSM";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -237,14 +238,13 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Button button1;
         private Button button2;
         private TextBox textBox1;
         private TextBox textBox2;
@@ -263,5 +263,6 @@
         private ComboBox comboBox2;
         private Label label6;
         private Label label7;
+        private Button button1;
     }
 }
