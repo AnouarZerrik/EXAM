@@ -43,6 +43,7 @@
             this.Anuller_btn = new System.Windows.Forms.Button();
             this.validate_btn = new System.Windows.Forms.Button();
             this.Ajoute_btn = new System.Windows.Forms.Button();
+            this.delete_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // option1_txt
@@ -143,7 +144,7 @@
             // 
             // Anuller_btn
             // 
-            this.Anuller_btn.Location = new System.Drawing.Point(162, 384);
+            this.Anuller_btn.Location = new System.Drawing.Point(291, 386);
             this.Anuller_btn.Name = "Anuller_btn";
             this.Anuller_btn.Size = new System.Drawing.Size(123, 44);
             this.Anuller_btn.TabIndex = 29;
@@ -153,7 +154,7 @@
             // 
             // validate_btn
             // 
-            this.validate_btn.Location = new System.Drawing.Point(305, 384);
+            this.validate_btn.Location = new System.Drawing.Point(434, 386);
             this.validate_btn.Name = "validate_btn";
             this.validate_btn.Size = new System.Drawing.Size(123, 44);
             this.validate_btn.TabIndex = 28;
@@ -171,11 +172,22 @@
             this.Ajoute_btn.UseVisualStyleBackColor = true;
             this.Ajoute_btn.Click += new System.EventHandler(this.Ajoute_btn_Click);
             // 
+            // delete_btn
+            // 
+            this.delete_btn.Location = new System.Drawing.Point(162, 386);
+            this.delete_btn.Name = "delete_btn";
+            this.delete_btn.Size = new System.Drawing.Size(108, 44);
+            this.delete_btn.TabIndex = 30;
+            this.delete_btn.Text = "delete";
+            this.delete_btn.UseVisualStyleBackColor = true;
+            this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
+            // 
             // QSM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.delete_btn);
             this.Controls.Add(this.Anuller_btn);
             this.Controls.Add(this.validate_btn);
             this.Controls.Add(this.Ajoute_btn);
@@ -216,5 +228,6 @@
         private Button Anuller_btn;
         private Button validate_btn;
         private Button Ajoute_btn;
+        private Button delete_btn;
     }
 }

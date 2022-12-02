@@ -15,6 +15,7 @@ namespace EXAM
 {
     public partial class QSM : Form
     {
+        public int val;
         public QSM()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace EXAM
 
         private void QSM_Load(object sender, EventArgs e)
         {
+            
             Anuller_btn.Enabled= false;
             validate_btn.Enabled= false;
             id_qsm_txt.Enabled=false;
@@ -41,6 +43,7 @@ namespace EXAM
 
         private void Ajoute_btn_Click(object sender, EventArgs e)
         {
+            val = 1;
             validate_btn.Enabled =true;
             Ajoute_btn.Enabled =false;
             Anuller_btn.Enabled = true;
@@ -62,38 +65,70 @@ namespace EXAM
         private void validate_btn_Click(object sender, EventArgs e)
         {
 
-
-            cnx.Open();
-            cmd.Connection = cnx;
-            if (id_qsm_txt.Text == "" || question_txt.Text == "" || option1_txt.Text == "" || option2_txt.Text == "" || option3_txt.Text == "" || optionC_txt.Text == "")
-            { MessageBox.Show("enter the inputs"); }
-            else
+            if (val == 1)
             {
-                cmd.CommandText = "insert into QSM(id_qsm,question,option1,option2 ,option3,option_corecte) values('" + id_qsm_txt.Text + "','" + question_txt.Text + "','" + option1_txt.Text + "','" + option2_txt.Text + "','" + option3_txt.Text + "','" + optionC_txt.Text + "') ";
-                cmd.ExecuteNonQuery();
+                cnx.Open();
+                cmd.Connection = cnx;
+                if (id_qsm_txt.Text == "" || question_txt.Text == "" || option1_txt.Text == "" || option2_txt.Text == "" || option3_txt.Text == "" || optionC_txt.Text == "")
+                { MessageBox.Show("enter the inputs"); }
+                else
+                {
+                    cmd.CommandText = "insert into QSM(id_qsm,question,option1,option2 ,option3,option_corecte) values('" + id_qsm_txt.Text + "','" + question_txt.Text + "','" + option1_txt.Text + "','" + option2_txt.Text + "','" + option3_txt.Text + "','" + optionC_txt.Text + "') ";
+                    cmd.ExecuteNonQuery();
 
-                Ajoute_btn.Enabled = true;
-                Anuller_btn.Enabled = false;
-                validate_btn.Enabled = false;
-                id_qsm_txt.Enabled = false;
-                question_txt.Enabled = false;
-                option1_txt.Enabled = false;
-                option2_txt.Enabled = false;
-                option3_txt.Enabled = false;
-                optionC_txt.Enabled = false;
+                    Ajoute_btn.Enabled = true;
+                    delete_btn.Enabled = true;
+                    Anuller_btn.Enabled = false;
+                    validate_btn.Enabled = false;
+                    id_qsm_txt.Enabled = false;
+                    question_txt.Enabled = false;
+                    option1_txt.Enabled = false;
+                    option2_txt.Enabled = false;
+                    option3_txt.Enabled = false;
+                    optionC_txt.Enabled = false;
+                    cnx.Close();
+                    id_qsm_txt.Clear();
+                    question_txt.Clear();
+                    option1_txt.Clear();
+                    option2_txt.Clear();
+                    option3_txt.Clear();
+                    optionC_txt.Clear();
+                }
+            }
+
+            if (val == 2)
+            {
+                cnx.Open();
+                cmd.Connection = cnx;
+                if (id_qsm_txt.Text == "")
+                { MessageBox.Show("enter the inputs"); }
+                else
+                {
+                    cmd.CommandText = "delete from QSM where id_qsm='" + id_qsm_txt.Text + "' ";
+                    cmd.ExecuteNonQuery();
+
+                    Ajoute_btn.Enabled = true;
+                    delete_btn.Enabled = true;
+                    Anuller_btn.Enabled = false;
+                    validate_btn.Enabled = false;
+                    id_qsm_txt.Enabled = false;
+                    question_txt.Enabled = false;
+                    option1_txt.Enabled = false;
+                    option2_txt.Enabled = false;
+                    option3_txt.Enabled = false;
+                    optionC_txt.Enabled = false;
+
+
+                }
                 cnx.Close();
                 id_qsm_txt.Clear();
-                question_txt.Clear();
-                option1_txt.Clear();
-                option2_txt.Clear();
-                option3_txt.Clear();
-                optionC_txt.Clear();
             }
         }
 
         private void Anuller_btn_Click(object sender, EventArgs e)
         {
-            Ajoute_btn.Enabled = true; 
+            Ajoute_btn.Enabled = true;
+            delete_btn.Enabled = true;
             Anuller_btn.Enabled=false;
             validate_btn.Enabled = false;
             id_qsm_txt.Clear();
@@ -109,6 +144,27 @@ namespace EXAM
             Form1 f = new Form1();
             f.Show();
 
+        }
+
+        private void delete_btn_Click(object sender, EventArgs e)
+        {
+            val = 2;
+            validate_btn.Enabled = true;
+            delete_btn.Enabled = false;
+            Ajoute_btn.Enabled = false;
+            Anuller_btn.Enabled = true;
+            id_qsm_txt.Enabled = true;
+            question_txt.Enabled = false;
+            option1_txt.Enabled = false;
+            option2_txt.Enabled = false;
+            option3_txt.Enabled = false;
+            optionC_txt.Enabled = false;
+            id_qsm_txt.Clear();
+            question_txt.Clear();
+            option1_txt.Clear();
+            option2_txt.Clear();
+            option3_txt.Clear();
+            optionC_txt.Clear();
         }
     }
 }

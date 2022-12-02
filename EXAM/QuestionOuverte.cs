@@ -4,11 +4,14 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
+using System.ComponentModel.DataAnnotations;
+using System.Threading.Channels;
 
 namespace EXAM
 {
     public partial class QuestionOuverte : Form
     {
+        public int val;
         public QuestionOuverte()
         {
             InitializeComponent();
@@ -61,30 +64,64 @@ namespace EXAM
 
         private void validate_btn_Click(object sender, EventArgs e)
         {
-
-            cnx.Open();
-            cmd.Connection = cnx;
-            if (id_question_txt.Text == "" || question_txt.Text == "" || reponse_txt.Text == "")
-            { MessageBox.Show("enter the inputs"); }
-            else
+            if (val == 1)
             {
-                cmd.CommandText = "insert into question_ouverte(id_QuestionOuvert,question,Reponse) values('" + id_question_txt.Text + "','" + question_txt.Text + "','" + reponse_txt.Text + "') ";
-                cmd.ExecuteNonQuery();
-                ajoute_btn.Enabled = true;
-                id_question_txt.Enabled = false;
-                question_txt.Enabled = false;
-                reponse_txt.Enabled = false;
-                validate_btn.Enabled = false;
-                anuller_btn.Enabled = false;
-                cnx.Close();
+                cnx.Open();
+                cmd.Connection = cnx;
+                if (id_question_txt.Text == "" || question_txt.Text == "" || reponse_txt.Text == "")
+                { MessageBox.Show("enter the inputs"); }
+                else
+                {
+                    cmd.CommandText = "insert into question_ouverte(id_QuestionOuvert,question,Reponse) values('" + id_question_txt.Text + "','" + question_txt.Text + "','" + reponse_txt.Text + "') ";
+                    cmd.ExecuteNonQuery();
+                    ajoute_btn.Enabled = true;
+                    id_question_txt.Enabled = false;
+                    question_txt.Enabled = false;
+                    reponse_txt.Enabled = false;
+                    validate_btn.Enabled = false;
+                    anuller_btn.Enabled = false;
+                    cnx.Close();
+
+                }
                 id_question_txt.Clear();
                 question_txt.Clear();
                 reponse_txt.Clear();
             }
+            if (val == 2)
+            {
+                cnx.Open();
+                cmd.Connection = cnx;
+                if (id_question_txt.Text == "")
+                { MessageBox.Show("enter the inputs"); }
+                else
+                {
+                    cmd.CommandText = "delete from question_ouverte where id_QuestionOuvert='" + id_question_txt.Text + "' ";
+                    cmd.ExecuteNonQuery();
+                    ajoute_btn.Enabled = true;
+                    delete_btn.Enabled = true;
+                    id_question_txt.Enabled = false;
+                    question_txt.Enabled = false;
+                    reponse_txt.Enabled = false;
+                    validate_btn.Enabled = false;
+                    anuller_btn.Enabled = false;
+
+                }
+                cnx.Close();
+                id_question_txt.Clear();
+            }
+
+            ajoute_btn.Enabled = true;
+            delete_btn.Enabled = true;
+            id_question_txt.Enabled = false;
+            question_txt.Enabled = false;
+            reponse_txt.Enabled = false;
+            validate_btn.Enabled = false;
+            anuller_btn.Enabled = false;
         }
 
         private void ajoute_btn_Click(object sender, EventArgs e)
         {
+            val = 1;
             ajoute_btn.Enabled = false;
             id_question_txt.Enabled = true;
             question_txt.Enabled = true;
@@ -96,6 +133,7 @@ namespace EXAM
         private void anuller_btn_Click(object sender, EventArgs e)
         {
             ajoute_btn.Enabled = true;
+            delete_btn.Enabled = true;
             id_question_txt.Enabled = false;
             question_txt.Enabled = false;
             reponse_txt.Enabled = false;
@@ -105,6 +143,21 @@ namespace EXAM
             id_question_txt.Clear();
             question_txt.Clear();
             reponse_txt.Clear();
+        }
+
+        private void delete_btn_Click(object sender, EventArgs e)
+        {
+            val = 2;
+            ajoute_btn.Enabled = false;
+            delete_btn.Enabled = false;
+            id_question_txt.Enabled = true;
+            question_txt.Enabled = true;
+            reponse_txt.Enabled = true;
+            validate_btn.Enabled = true;
+            anuller_btn.Enabled = true;
+            question_txt.Enabled = false;
+            reponse_txt.Enabled = false;
+
         }
     }
 }

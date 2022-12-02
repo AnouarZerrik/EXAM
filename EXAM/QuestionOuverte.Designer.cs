@@ -37,11 +37,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.question_txt = new System.Windows.Forms.TextBox();
             this.id_question_txt = new System.Windows.Forms.TextBox();
+            this.delete_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // anuller_btn
             // 
-            this.anuller_btn.Location = new System.Drawing.Point(169, 394);
+            this.anuller_btn.Location = new System.Drawing.Point(294, 394);
             this.anuller_btn.Name = "anuller_btn";
             this.anuller_btn.Size = new System.Drawing.Size(123, 44);
             this.anuller_btn.TabIndex = 21;
@@ -51,7 +52,7 @@
             // 
             // validate_btn
             // 
-            this.validate_btn.Location = new System.Drawing.Point(312, 394);
+            this.validate_btn.Location = new System.Drawing.Point(437, 394);
             this.validate_btn.Name = "validate_btn";
             this.validate_btn.Size = new System.Drawing.Size(123, 44);
             this.validate_btn.TabIndex = 20;
@@ -123,11 +124,22 @@
             this.id_question_txt.TabIndex = 25;
             this.id_question_txt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // delete_btn
+            // 
+            this.delete_btn.Location = new System.Drawing.Point(169, 396);
+            this.delete_btn.Name = "delete_btn";
+            this.delete_btn.Size = new System.Drawing.Size(110, 44);
+            this.delete_btn.TabIndex = 31;
+            this.delete_btn.Text = "delete";
+            this.delete_btn.UseVisualStyleBackColor = true;
+            this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
+            // 
             // QuestionOuverte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.delete_btn);
             this.Controls.Add(this.reponse_txt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -156,5 +168,6 @@
         private Label label1;
         private TextBox question_txt;
         private TextBox id_question_txt;
+        private Button delete_btn;
     }
 }
