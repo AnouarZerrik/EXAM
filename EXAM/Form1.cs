@@ -75,7 +75,7 @@ namespace EXAM
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button1_Click_2(object sender, EventArgs e)
@@ -171,11 +171,11 @@ namespace EXAM
 
         private void validate_btn_Click(object sender, EventArgs e)
         {
-            if(val == 1)
+            if (val == 1)
             {
                 cnx.Open();
                 cmd.Connection = cnx;
-                if (idexam_exam.Text == "" || debut_txt.Text == "" || fin_txt.Text == "" )
+                if (idexam_exam.Text == "" || debut_txt.Text == "" || fin_txt.Text == "")
                 { MessageBox.Show("enter the inputs"); }
                 else
                 {
@@ -198,7 +198,7 @@ namespace EXAM
             {
                 cnx.Open();
                 cmd.Connection = cnx;
-                if (idexam_exam.Text == "" )
+                if (idexam_exam.Text == "")
                 { MessageBox.Show("enter the inputs"); }
                 else
                 {
@@ -215,6 +215,7 @@ namespace EXAM
                     idouverte_txt.Enabled = false;
                     cnx.Close();
                 }
+            }
         }
     }
 }
