@@ -44,6 +44,8 @@
             this.validate_btn = new System.Windows.Forms.Button();
             this.Ajoute_btn = new System.Windows.Forms.Button();
             this.delete_btn = new System.Windows.Forms.Button();
+            this.update_btn = new System.Windows.Forms.Button();
+            this.cbx = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // option1_txt
@@ -144,7 +146,7 @@
             // 
             // Anuller_btn
             // 
-            this.Anuller_btn.Location = new System.Drawing.Point(291, 386);
+            this.Anuller_btn.Location = new System.Drawing.Point(518, 394);
             this.Anuller_btn.Name = "Anuller_btn";
             this.Anuller_btn.Size = new System.Drawing.Size(123, 44);
             this.Anuller_btn.TabIndex = 29;
@@ -154,7 +156,7 @@
             // 
             // validate_btn
             // 
-            this.validate_btn.Location = new System.Drawing.Point(434, 386);
+            this.validate_btn.Location = new System.Drawing.Point(665, 394);
             this.validate_btn.Name = "validate_btn";
             this.validate_btn.Size = new System.Drawing.Size(123, 44);
             this.validate_btn.TabIndex = 28;
@@ -164,7 +166,7 @@
             // 
             // Ajoute_btn
             // 
-            this.Ajoute_btn.Location = new System.Drawing.Point(22, 386);
+            this.Ajoute_btn.Location = new System.Drawing.Point(21, 394);
             this.Ajoute_btn.Name = "Ajoute_btn";
             this.Ajoute_btn.Size = new System.Drawing.Size(123, 44);
             this.Ajoute_btn.TabIndex = 27;
@@ -174,7 +176,7 @@
             // 
             // delete_btn
             // 
-            this.delete_btn.Location = new System.Drawing.Point(162, 386);
+            this.delete_btn.Location = new System.Drawing.Point(161, 394);
             this.delete_btn.Name = "delete_btn";
             this.delete_btn.Size = new System.Drawing.Size(108, 44);
             this.delete_btn.TabIndex = 30;
@@ -182,11 +184,32 @@
             this.delete_btn.UseVisualStyleBackColor = true;
             this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
             // 
+            // update_btn
+            // 
+            this.update_btn.Location = new System.Drawing.Point(275, 394);
+            this.update_btn.Name = "update_btn";
+            this.update_btn.Size = new System.Drawing.Size(121, 44);
+            this.update_btn.TabIndex = 31;
+            this.update_btn.Text = "modifier";
+            this.update_btn.UseVisualStyleBackColor = true;
+            this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
+            // 
+            // cbx
+            // 
+            this.cbx.FormattingEnabled = true;
+            this.cbx.Location = new System.Drawing.Point(566, 101);
+            this.cbx.Name = "cbx";
+            this.cbx.Size = new System.Drawing.Size(121, 23);
+            this.cbx.TabIndex = 32;
+            this.cbx.SelectedIndexChanged += new System.EventHandler(this.cbx_SelectedIndexChanged);
+            // 
             // QSM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbx);
+            this.Controls.Add(this.update_btn);
             this.Controls.Add(this.delete_btn);
             this.Controls.Add(this.Anuller_btn);
             this.Controls.Add(this.validate_btn);
@@ -229,5 +252,7 @@
         private Button validate_btn;
         private Button Ajoute_btn;
         private Button delete_btn;
+        private Button update_btn;
+        private ComboBox cbx;
     }
 }

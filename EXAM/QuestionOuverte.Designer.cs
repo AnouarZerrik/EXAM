@@ -38,11 +38,13 @@
             this.question_txt = new System.Windows.Forms.TextBox();
             this.id_question_txt = new System.Windows.Forms.TextBox();
             this.delete_btn = new System.Windows.Forms.Button();
+            this.update_btn = new System.Windows.Forms.Button();
+            this.cbx = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // anuller_btn
             // 
-            this.anuller_btn.Location = new System.Drawing.Point(294, 394);
+            this.anuller_btn.Location = new System.Drawing.Point(522, 396);
             this.anuller_btn.Name = "anuller_btn";
             this.anuller_btn.Size = new System.Drawing.Size(123, 44);
             this.anuller_btn.TabIndex = 21;
@@ -52,7 +54,7 @@
             // 
             // validate_btn
             // 
-            this.validate_btn.Location = new System.Drawing.Point(437, 394);
+            this.validate_btn.Location = new System.Drawing.Point(665, 396);
             this.validate_btn.Name = "validate_btn";
             this.validate_btn.Size = new System.Drawing.Size(123, 44);
             this.validate_btn.TabIndex = 20;
@@ -134,11 +136,31 @@
             this.delete_btn.UseVisualStyleBackColor = true;
             this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
             // 
+            // update_btn
+            // 
+            this.update_btn.Location = new System.Drawing.Point(285, 396);
+            this.update_btn.Name = "update_btn";
+            this.update_btn.Size = new System.Drawing.Size(106, 44);
+            this.update_btn.TabIndex = 32;
+            this.update_btn.Text = "modifier";
+            this.update_btn.UseVisualStyleBackColor = true;
+            this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
+            // 
+            // cbx
+            // 
+            this.cbx.FormattingEnabled = true;
+            this.cbx.Location = new System.Drawing.Point(581, 106);
+            this.cbx.Name = "cbx";
+            this.cbx.Size = new System.Drawing.Size(121, 23);
+            this.cbx.TabIndex = 33;
+            // 
             // QuestionOuverte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbx);
+            this.Controls.Add(this.update_btn);
             this.Controls.Add(this.delete_btn);
             this.Controls.Add(this.reponse_txt);
             this.Controls.Add(this.label3);
@@ -169,5 +191,7 @@
         private TextBox question_txt;
         private TextBox id_question_txt;
         private Button delete_btn;
+        private Button update_btn;
+        private ComboBox cbx;
     }
 }
