@@ -190,6 +190,10 @@ namespace EXAM
                     fin_txt.Enabled = false;
                     idqsm_txt.Enabled = false;
                     idouverte_txt.Enabled = false;
+                    idexam_exam.Clear();
+                    debut_txt.Clear();
+                    fin_txt.Clear();
+
                     cnx.Close();
 
                 }
@@ -213,6 +217,7 @@ namespace EXAM
                     fin_txt.Enabled = false;
                     idqsm_txt.Enabled = false;
                     idouverte_txt.Enabled = false;
+                    idexam_exam.Clear();
                     cnx.Close();
                 }
             }
